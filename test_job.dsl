@@ -1,5 +1,5 @@
 job("groovy_jenkins"){
   steps{
-    shell("ls")
+    shell("ps")
   }
 }
