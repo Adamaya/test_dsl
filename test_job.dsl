@@ -3,7 +3,7 @@ job('idrac_lcmhyd023') {
     steps{
       shell {
       command('''#!/bin/bash -l
-ssh -o "StrictHostKeyChecking=no" lcmhyd015i.silabs.com "racadm serveraction powercycle"''')
+ssh -o "StrictHostKeyChecking=no" lcmhyd023i.silabs.com "racadm serveraction powercycle"''')
     }
   }
 }
