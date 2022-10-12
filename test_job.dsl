@@ -1,9 +1,8 @@
-job('idrac_lcmhyd023') {
+job('test_vsphere') {
     logRotator(90)
     steps{
       shell {
-      command('''#!/bin/bash -l
-ssh -o "StrictHostKeyChecking=no" lcmhyd023i.silabs.com "racadm serveraction powercycle"''')
+      vSpherePowerOn('vcnter-hyd', 'etxhyd020',60)
     }
   }
 }
