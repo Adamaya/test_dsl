@@ -322,31 +322,4 @@ job('idrac_lcmhyd023') {
                                 }
                             }
                         }
-                    job('idrac_lcmhyd035') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd035i.silabs.com "racadm serveraction powercycle"''')
-                                }
-                            }
-                        }
-                    job('patch_shutdown_lcmhyd035') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd035.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -h +1"''')
-                                }
-                            }
-                        }
-                    job('hyd_patch_lcmhyd035') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd035.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -r +1"''')
-                                }
-                            }
-                        }
                     
