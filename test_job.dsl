@@ -1,324 +1,150 @@
-job('idrac_lcmhyd023') {
+job('Turnon_lsfhydd01') {
+                        logRotator(90)
+                        steps{    
+                            vSpherePowerOn('vcenter-hyd', lsfhydd01,60)
+                            }
+                        }
+                    job('shutdown_lsfhydd01') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd023i.silabs.com "racadm serveraction powercycle"''')
+                                    ssh -o "StrictHostKeyChecking=no" lsfhydd01.silabs.com "sudo /sbin/shutdown -h +1"''')
                                 }
                             }
                         }
-                    job('patch_shutdown_lcmhyd023') {
+                    job('Turnon_dochydd01') {
+                        logRotator(90)
+                        steps{    
+                            vSpherePowerOn('vcenter-hyd', dochydd01,60)
+                            }
+                        }
+                    job('shutdown_dochydd01') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd023.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -h +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" dochydd01.silabs.com "sudo /sbin/shutdown -h +1"''')
                                 }
                             }
                         }
-                    job('hyd_patch_lcmhyd023') {
+                    job('Turnon_enrhyd001') {
+                        logRotator(90)
+                        steps{    
+                            vSpherePowerOn('vcenter-hyd', enrhyd001,60)
+                            }
+                        }
+                    job('shutdown_enrhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd023.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -r +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" enrhyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
                                 }
                             }
                         }
-                    job('idrac_lcmhyd024') {
+                    job('Turnon_sinhyd001') {
+                        logRotator(90)
+                        steps{    
+                            vSpherePowerOn('vcenter-hyd', sinhyd001,60)
+                            }
+                        }
+                    job('shutdown_sinhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd024i.silabs.com "racadm serveraction powercycle"''')
+                                    ssh -o "StrictHostKeyChecking=no" sinhyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
                                 }
                             }
                         }
-                    job('patch_shutdown_lcmhyd024') {
+                    job('Turnon_shihyd001') {
+                        logRotator(90)
+                        steps{    
+                            vSpherePowerOn('vcenter-hyd', shihyd001,60)
+                            }
+                        }
+                    job('shutdown_shihyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd024.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -h +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" shihyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
                                 }
                             }
                         }
-                    job('hyd_patch_lcmhyd024') {
+                    job('Turnon_shihyd010') {
+                        logRotator(90)
+                        steps{    
+                            vSpherePowerOn('vcenter-hyd', shihyd010,60)
+                            }
+                        }
+                    job('shutdown_shihyd010') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd024.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -r +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" shihyd010.silabs.com "sudo /sbin/shutdown -h +1"''')
                                 }
                             }
                         }
-                    job('idrac_lcmhyd025') {
+                    job('Turnon_podhyd001') {
+                        logRotator(90)
+                        steps{    
+                            vSpherePowerOn('vcenter-hyd', podhyd001,60)
+                            }
+                        }
+                    job('shutdown_podhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd025i.silabs.com "racadm serveraction powercycle"''')
+                                    ssh -o "StrictHostKeyChecking=no" podhyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
                                 }
                             }
                         }
-                    job('patch_shutdown_lcmhyd025') {
+                    job('Turnon_rsyhyd001') {
+                        logRotator(90)
+                        steps{    
+                            vSpherePowerOn('vcenter-hyd', rsyhyd001,60)
+                            }
+                        }
+                    job('shutdown_rsyhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd025.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -h +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" rsyhyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
                                 }
                             }
                         }
-                    job('hyd_patch_lcmhyd025') {
+                    job('Turnon_prohyd001') {
+                        logRotator(90)
+                        steps{    
+                            vSpherePowerOn('vcenter-hyd', prohyd001,60)
+                            }
+                        }
+                    job('shutdown_prohyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd025.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -r +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" prohyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
                                 }
                             }
                         }
-                    job('idrac_lcmhyd026') {
+                    job('Turnon_vmghyd001') {
                         logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd026i.silabs.com "racadm serveraction powercycle"''')
-                                }
+                        steps{    
+                            vSpherePowerOn('vcenter-hyd', vmghyd001,60)
                             }
                         }
-                    job('patch_shutdown_lcmhyd026') {
+                    job('shutdown_vmghyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd026.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -h +1"''')
-                                }
-                            }
-                        }
-                    job('hyd_patch_lcmhyd026') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd026.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -r +1"''')
-                                }
-                            }
-                        }
-                    job('idrac_lcmhyd027') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd027i.silabs.com "racadm serveraction powercycle"''')
-                                }
-                            }
-                        }
-                    job('patch_shutdown_lcmhyd027') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd027.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -h +1"''')
-                                }
-                            }
-                        }
-                    job('hyd_patch_lcmhyd027') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd027.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -r +1"''')
-                                }
-                            }
-                        }
-                    job('idrac_lcmhyd028') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd028i.silabs.com "racadm serveraction powercycle"''')
-                                }
-                            }
-                        }
-                    job('patch_shutdown_lcmhyd028') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd028.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -h +1"''')
-                                }
-                            }
-                        }
-                    job('hyd_patch_lcmhyd028') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd028.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -r +1"''')
-                                }
-                            }
-                        }
-                    job('idrac_lcmhyd029') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd029i.silabs.com "racadm serveraction powercycle"''')
-                                }
-                            }
-                        }
-                    job('patch_shutdown_lcmhyd029') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd029.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -h +1"''')
-                                }
-                            }
-                        }
-                    job('hyd_patch_lcmhyd029') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd029.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -r +1"''')
-                                }
-                            }
-                        }
-                    job('idrac_lcmhyd030') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd030i.silabs.com "racadm serveraction powercycle"''')
-                                }
-                            }
-                        }
-                    job('patch_shutdown_lcmhyd030') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd030.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -h +1"''')
-                                }
-                            }
-                        }
-                    job('hyd_patch_lcmhyd030') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd030.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -r +1"''')
-                                }
-                            }
-                        }
-                    job('idrac_lcmhyd031') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd031i.silabs.com "racadm serveraction powercycle"''')
-                                }
-                            }
-                        }
-                    job('patch_shutdown_lcmhyd031') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd031.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -h +1"''')
-                                }
-                            }
-                        }
-                    job('hyd_patch_lcmhyd031') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd031.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -r +1"''')
-                                }
-                            }
-                        }
-                    job('idrac_lcmhyd032') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd032i.silabs.com "racadm serveraction powercycle"''')
-                                }
-                            }
-                        }
-                    job('patch_shutdown_lcmhyd032') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd032.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -h +1"''')
-                                }
-                            }
-                        }
-                    job('hyd_patch_lcmhyd032') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd032.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -r +1"''')
-                                }
-                            }
-                        }
-                    job('idrac_lcmhyd033') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd033i.silabs.com "racadm serveraction powercycle"''')
-                                }
-                            }
-                        }
-                    job('patch_shutdown_lcmhyd033') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd033.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -h +1"''')
-                                }
-                            }
-                        }
-                    job('hyd_patch_lcmhyd033') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd033.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -r +1"''')
-                                }
-                            }
-                        }
-                    job('idrac_lcmhyd034') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd034i.silabs.com "racadm serveraction powercycle"''')
-                                }
-                            }
-                        }
-                    job('patch_shutdown_lcmhyd034') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd034.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -h +1"''')
-                                }
-                            }
-                        }
-                    job('hyd_patch_lcmhyd034') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd034.silabs.com "sudo /usr/bin/yum update -y && sudo /sbin/shutdown -r +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" vmghyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
                                 }
                             }
                         }
