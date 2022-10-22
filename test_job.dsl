@@ -1,18 +1,3 @@
-job('Turnon_lsfhydd01') {
-                        logRotator(90)
-                        steps{    
-                            vSpherePowerOn('vcenter-hyd', lsfhydd01,60)
-                            }
-                        }
-                    job('shutdown_lsfhydd01') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lsfhydd01.silabs.com "sudo /sbin/shutdown -h +1"''')
-                                }
-                            }
-                        }
                     job('Turnon_dochydd01') {
                         logRotator(90)
                         steps{    
