@@ -1,4 +1,4 @@
-job('patch_etxhyd002') {
+job('hyd_just_patch_etxhyd002') {
                         logRotator(90)
                         steps{
                             shell {
@@ -7,7 +7,7 @@ job('patch_etxhyd002') {
                                 }
                             }
                         }
-                    job('patch_etxhyd003') {
+                    job('hyd_just_patch_etxhyd003') {
                         logRotator(90)
                         steps{
                             shell {
@@ -16,7 +16,7 @@ job('patch_etxhyd002') {
                                 }
                             }
                         }
-                    job('patch_etxhyd004') {
+                    job('hyd_just_patch_etxhyd004') {
                         logRotator(90)
                         steps{
                             shell {
@@ -25,7 +25,7 @@ job('patch_etxhyd002') {
                                 }
                             }
                         }
-                    job('patch_etxhyd005') {
+                    job('hyd_just_patch_etxhyd005') {
                         logRotator(90)
                         steps{
                             shell {
@@ -34,7 +34,7 @@ job('patch_etxhyd002') {
                                 }
                             }
                         }
-                    job('patch_etxhyd006') {
+                    job('hyd_just_patch_etxhyd006') {
                         logRotator(90)
                         steps{
                             shell {
@@ -43,7 +43,7 @@ job('patch_etxhyd002') {
                                 }
                             }
                         }
-                    job('patch_etxhyd007') {
+                    job('hyd_just_patch_etxhyd007') {
                         logRotator(90)
                         steps{
                             shell {
@@ -52,7 +52,7 @@ job('patch_etxhyd002') {
                                 }
                             }
                         }
-                    job('patch_etxhyd008') {
+                    job('hyd_just_patch_etxhyd008') {
                         logRotator(90)
                         steps{
                             shell {
@@ -61,7 +61,7 @@ job('patch_etxhyd002') {
                                 }
                             }
                         }
-                    job('patch_etxhyd009') {
+                    job('hyd_just_patch_etxhyd009') {
                         logRotator(90)
                         steps{
                             shell {
@@ -70,7 +70,7 @@ job('patch_etxhyd002') {
                                 }
                             }
                         }
-                    job('patch_etxhyd010') {
+                    job('hyd_just_patch_etxhyd010') {
                         logRotator(90)
                         steps{
                             shell {
@@ -79,7 +79,7 @@ job('patch_etxhyd002') {
                                 }
                             }
                         }
-                    job('patch_etxhyd011') {
+                    job('hyd_just_patch_etxhyd011') {
                         logRotator(90)
                         steps{
                             shell {
@@ -88,7 +88,7 @@ job('patch_etxhyd002') {
                                 }
                             }
                         }
-                    job('patch_etxhyd012') {
+                    job('hyd_just_patch_etxhyd012') {
                         logRotator(90)
                         steps{
                             shell {
@@ -97,7 +97,7 @@ job('patch_etxhyd002') {
                                 }
                             }
                         }
-                    job('patch_etxhyd013') {
+                    job('hyd_just_patch_etxhyd013') {
                         logRotator(90)
                         steps{
                             shell {
@@ -106,3 +106,4 @@ job('patch_etxhyd002') {
                                 }
                             }
                         }
+                    
