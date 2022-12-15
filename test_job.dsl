@@ -1,135 +1,108 @@
-                    job('Turnon_dochydd01') {
-                        logRotator(90)
-                        steps{    
-                            vSpherePowerOn('vcenter-hyd', dochydd01,60)
-                            }
-                        }
-                    job('shutdown_dochydd01') {
+job('patch_etxhyd002') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" dochydd01.silabs.com "sudo /sbin/shutdown -h +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" etxhyd002.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('Turnon_enrhyd001') {
-                        logRotator(90)
-                        steps{    
-                            vSpherePowerOn('vcenter-hyd', enrhyd001,60)
-                            }
-                        }
-                    job('shutdown_enrhyd001') {
+                    job('patch_etxhyd003') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" enrhyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" etxhyd003.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('Turnon_sinhyd001') {
-                        logRotator(90)
-                        steps{    
-                            vSpherePowerOn('vcenter-hyd', sinhyd001,60)
-                            }
-                        }
-                    job('shutdown_sinhyd001') {
+                    job('patch_etxhyd004') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" sinhyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" etxhyd004.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('Turnon_shihyd001') {
-                        logRotator(90)
-                        steps{    
-                            vSpherePowerOn('vcenter-hyd', shihyd001,60)
-                            }
-                        }
-                    job('shutdown_shihyd001') {
+                    job('patch_etxhyd005') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" shihyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" etxhyd005.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('Turnon_shihyd010') {
-                        logRotator(90)
-                        steps{    
-                            vSpherePowerOn('vcenter-hyd', shihyd010,60)
-                            }
-                        }
-                    job('shutdown_shihyd010') {
+                    job('patch_etxhyd006') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" shihyd010.silabs.com "sudo /sbin/shutdown -h +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" etxhyd006.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('Turnon_podhyd001') {
-                        logRotator(90)
-                        steps{    
-                            vSpherePowerOn('vcenter-hyd', podhyd001,60)
-                            }
-                        }
-                    job('shutdown_podhyd001') {
+                    job('patch_etxhyd007') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" podhyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" etxhyd007.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('Turnon_rsyhyd001') {
-                        logRotator(90)
-                        steps{    
-                            vSpherePowerOn('vcenter-hyd', rsyhyd001,60)
-                            }
-                        }
-                    job('shutdown_rsyhyd001') {
+                    job('patch_etxhyd008') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" rsyhyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" etxhyd008.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('Turnon_prohyd001') {
-                        logRotator(90)
-                        steps{    
-                            vSpherePowerOn('vcenter-hyd', prohyd001,60)
-                            }
-                        }
-                    job('shutdown_prohyd001') {
+                    job('patch_etxhyd009') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" prohyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" etxhyd009.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('Turnon_vmghyd001') {
-                        logRotator(90)
-                        steps{    
-                            vSpherePowerOn('vcenter-hyd', vmghyd001,60)
-                            }
-                        }
-                    job('shutdown_vmghyd001') {
+                    job('patch_etxhyd010') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" vmghyd001.silabs.com "sudo /sbin/shutdown -h +1"''')
+                                    ssh -o "StrictHostKeyChecking=no" etxhyd010.silabs.com "sudo /usr/bin/yum update -y"''')
+                                }
+                            }
+                        }
+                    job('patch_etxhyd011') {
+                        logRotator(90)
+                        steps{
+                            shell {
+                            command('''#!/bin/bash -l
+                                    ssh -o "StrictHostKeyChecking=no" etxhyd011.silabs.com "sudo /usr/bin/yum update -y"''')
+                                }
+                            }
+                        }
+                    job('patch_etxhyd012') {
+                        logRotator(90)
+                        steps{
+                            shell {
+                            command('''#!/bin/bash -l
+                                    ssh -o "StrictHostKeyChecking=no" etxhyd012.silabs.com "sudo /usr/bin/yum update -y"''')
+                                }
+                            }
+                        }
+                    job('patch_etxhyd013') {
+                        logRotator(90)
+                        steps{
+                            shell {
+                            command('''#!/bin/bash -l
+                                    ssh -o "StrictHostKeyChecking=no" etxhyd013.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
