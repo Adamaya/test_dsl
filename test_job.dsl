@@ -1,180 +1,198 @@
-job('hyd_just_patch_lcmhyd001') {
+job('hyd_just_patch_cadhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd001.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" cadhyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd002') {
+                    job('hyd_just_patch_rsyhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd002.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" rsyhyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd003') {
+                    job('hyd_just_patch_vmghyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd003.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" vmghyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd004') {
+                    job('hyd_just_patch_lsfhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd004.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" lsfhyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd005') {
+                    job('hyd_just_patch_lsfhyd002') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd005.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" lsfhyd002.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd006') {
+                    job('hyd_just_patch_lsfhyd003') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd006.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" lsfhyd003.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd007') {
+                    job('hyd_just_patch_p4shyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd007.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" p4shyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd008') {
+                    job('hyd_just_patch_jblhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd008.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" jblhyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd009') {
+                    job('hyd_just_patch_lichyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd009.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" lichyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd010') {
+                    job('hyd_just_patch_lichyd002') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd010.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" lichyd002.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd011') {
+                    job('hyd_just_patch_itmhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd011.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" itmhyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd012') {
+                    job('hyd_just_patch_lanhyd002') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd012.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" lanhyd002.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd013') {
+                    job('hyd_just_patch_caphyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd013.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" caphyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd014') {
+                    job('hyd_just_patch_grfhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd014.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" grfhyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd015') {
+                    job('hyd_just_patch_prohyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd015.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" prohyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd016') {
+                    job('hyd_just_patch_itjhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd016.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" itjhyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd017') {
+                    job('hyd_just_patch_enrhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd017.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" enrhyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd018') {
+                    job('hyd_just_patch_podhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd018.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" podhyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd019') {
+                    job('hyd_just_patch_shihyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd019.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" shihyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd020') {
+                    job('hyd_just_patch_podhydd01') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd020.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" podhydd01.silabs.com "sudo /usr/bin/yum update -y"''')
+                                }
+                            }
+                        }
+                    job('hyd_just_patch_shihyd010') {
+                        logRotator(90)
+                        steps{
+                            shell {
+                            command('''#!/bin/bash -l
+                                    ssh -o "StrictHostKeyChecking=no" shihyd010.silabs.com "sudo /usr/bin/yum update -y"''')
+                                }
+                            }
+                        }
+                    job('hyd_just_patch_sinhyd001') {
+                        logRotator(90)
+                        steps{
+                            shell {
+                            command('''#!/bin/bash -l
+                                    ssh -o "StrictHostKeyChecking=no" sinhyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
@@ -187,129 +205,84 @@ job('hyd_just_patch_lcmhyd001') {
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd022') {
+                    job('hyd_just_patch_mdxhyd002') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd022.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" mdxhyd002.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd023') {
+                    job('hyd_just_patch_scnhyd010') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd023.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" scnhyd010.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd024') {
+                    job('hyd_just_patch_sqdhyde01') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd024.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" sqdhyde01.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd025') {
+                    job('hyd_just_patch_slghyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd025.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" slghyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd026') {
+                    job('hyd_just_patch_svnhyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd026.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" svnhyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd027') {
+                    job('hyd_just_patch_ksthyd001') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd027.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" ksthyd001.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd028') {
+                    job('hyd_just_patch_lsfhydd01') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd028.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" lsfhydd01.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd029') {
+                    job('hyd_just_patch_lcmhydd01') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd029.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" lcmhydd01.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
-                    job('hyd_just_patch_lcmhyd030') {
+                    job('hyd_just_patch_dochydd01') {
                         logRotator(90)
                         steps{
                             shell {
                             command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd030.silabs.com "sudo /usr/bin/yum update -y"''')
-                                }
-                            }
-                        }
-                    job('hyd_just_patch_lcmhyd031') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd031.silabs.com "sudo /usr/bin/yum update -y"''')
-                                }
-                            }
-                        }
-                    job('hyd_just_patch_lcmhyd032') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd032.silabs.com "sudo /usr/bin/yum update -y"''')
-                                }
-                            }
-                        }
-                    job('hyd_just_patch_lcmhyd033') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd033.silabs.com "sudo /usr/bin/yum update -y"''')
-                                }
-                            }
-                        }
-                    job('hyd_just_patch_lcmhyd034') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd034.silabs.com "sudo /usr/bin/yum update -y"''')
-                                }
-                            }
-                        }
-                    job('hyd_just_patch_lcmhyd035') {
-                        logRotator(90)
-                        steps{
-                            shell {
-                            command('''#!/bin/bash -l
-                                    ssh -o "StrictHostKeyChecking=no" lcmhyd035.silabs.com "sudo /usr/bin/yum update -y"''')
+                                    ssh -o "StrictHostKeyChecking=no" dochydd01.silabs.com "sudo /usr/bin/yum update -y"''')
                                 }
                             }
                         }
